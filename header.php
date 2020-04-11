@@ -10,12 +10,17 @@
     <?php wp_enqueue_script('script', get_template_directory_uri() . '/assets/cbuehler.min.js', [], '1.0.6'); ?>
 </head>
 
+<?php
+$custom_logo_id = get_theme_mod('custom_logo');
+$image = wp_get_attachment_image_src($custom_logo_id, 'full');
+?>
+
 <body <?php body_class(is_front_page() ? 'fixed-header' : ''); ?>>
     <canvas class="bg"></canvas>
     <div class="menu">
         <header class="top fx-row fx-center">
             <div class="logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/logocbuehler.svg" alt="cbuehler">
+                <img src="<?php echo $image[0]; ?>" alt="cbuehler">
             </div>
             <span class="flex"></span>
             <div class="menu-btn" onclick="document.body.classList.toggle('show-menu')">
@@ -39,7 +44,7 @@
     </div>
     <header class="top white fx-row fx-center">
         <div class="logo">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/logocbuehler.svg" alt="cbuehler">
+            <img src="<?php echo $image[0]; ?>" alt="cbuehler">
         </div>
         <span class="flex"></span>
         <div class="menu-btn" onclick="document.body.classList.toggle('show-menu')">
@@ -49,7 +54,7 @@
     <header class="left">
         <div>
             <div class="logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/logocbuehler.svg" alt="cbuehler">
+                <img src="<?php echo $image[0]; ?>" alt="cbuehler">
             </div>
         </div>
         <nav>
