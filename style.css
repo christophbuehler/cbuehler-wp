@@ -1,0 +1,21 @@
+/*!
+Theme Name: cbuehlerli
+Theme URI: http://cbuehler.li/
+Author: Christoph Buehler
+Author URI: http://cbuehler.li/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: cbuehlerli
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+}
