@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = [
   {
     entry: ".\\src\\main.ts",
@@ -5,6 +7,7 @@ module.exports = [
       filename: "cbuehler.min.js",
       library: "cbuehler",
       libraryExport: "default",
+      path: path.resolve(__dirname, 'assets'),
     },
     resolve: {
       extensions: [".ts", ".tsx"],

@@ -22,14 +22,14 @@ body {
     color: var(--content-color);
 
     @media all and (max-width: 1200px) {
-       @include fixed-header;
+        @include fixed-header;
     }
 
     &.fixed-header {
-       @include fixed-header;
+        @include fixed-header;
     }
 
-    &.reading::not(.fixed-header) {
+    &.reading:not(.fixed-header) {
         --content-color: rgba(0, 0, 0, .8);
         background: #fff;
 
