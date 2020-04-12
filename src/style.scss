@@ -208,6 +208,14 @@ body {
         }
     }
 
+    .article {
+        background-image: url('https://cbuehler.li/wp-content/uploads/2020/01/tiger-2048x1314.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 80px;
+        height: 80px;
+    }
+
     header.top {
         position: fixed;
         left: 0;
@@ -221,14 +229,6 @@ body {
         z-index: 1;
 
         .menu-btn {
-            cursor: pointer;
-            display: inline-block;
-            font-weight: 500;
-            font-size: 16px;
-
-            >.material-icons {
-                vertical-align: middle;
-            }
         }
 
         .nav-btn {
@@ -237,6 +237,8 @@ body {
             font-weight: 400;
             font-size: 16px;
             margin-left: 32px;
+            color: inherit;
+            text-decoration: none;
 
             >.material-icons {
                 vertical-align: middle;

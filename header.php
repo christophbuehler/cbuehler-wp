@@ -30,7 +30,9 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
             </div>
         </header>
         <nav>
-            ARTICLES
+            <div class="article">
+                Create Reactive Structure With Flutter Blueprint
+            </div>
         </nav>
     </div>
     <header class="top white fx-row fx-center">
@@ -38,7 +40,7 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
             <img src="<?php echo $image[0]; ?>" alt="cbuehler">
         </div>
         <span class="flex"></span>
-        <div class="menu-btn" onclick="document.body.classList.toggle('show-menu')">
+        <div class="menu-btn nav-btn" onclick="document.body.classList.toggle('show-menu')">
             Articles
         </div>
         <a href="/about-me" class="nav-btn">
