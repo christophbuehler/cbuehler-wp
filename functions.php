@@ -80,20 +80,20 @@ if ( ! function_exists( 'cbuehlerli_setup' ) ) :
 			'flex-height' => true,
 		) );
 
-		// add_settings_section (
-		// 	'theme_section', //section name for the section to add
-		// 	'Buehler Theme Settings', //section title visible on the page
-		// 	'theme_section_description', //callback for section description
-		// 	'Reading'//page to which section will be added.
-		// );
+		add_settings_section (
+			'theme_section', //section name for the section to add
+			'Buehler Theme Settings', //section title visible on the page
+			'theme_section_description', //callback for section description
+			'Reading'//page to which section will be added.
+		);
 
-		// add_settings_field (
-		// 	'first_field_option' //ID for the settings field to add
-		// 	'TestField', //settings title visible on the page
-		// 	'options_callback', //callback for displaying the settings field
-		// 	'Reading', // settings page to where option is displayed
-		// 	'first_section'// section id for parent section.
-		// );
+		add_settings_field (
+			'first_field_option', //ID for the settings field to add
+			'TestField', //settings title visible on the page
+			'options_callback', //callback for displaying the settings field
+			'Reading', // settings page to where option is displayed
+			'first_section'// section id for parent section.
+		);
 	}
 
 	function theme_section_description () {
