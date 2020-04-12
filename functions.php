@@ -91,25 +91,24 @@ add_action( 'after_setup_theme', 'cbuehlerli_setup' );
 add_action('admin_init', 'add_settings');
 function add_settings() {
 	add_menu_page(
-		'Christoph Buehler Theme',
-		'Christoph Buehler Theme',
+		'Cbuehlerli Theme',
+		'Cbuehlerli Theme',
 		'manage_options',
-		'cbuehler_theme',
-		'testTheme_create_page'
+		'cbuehlerli_theme'
 	);
 
     add_settings_section (
-		'cbuehler_theme', //section name for the section to add
+		'cbuehlerli_design', //section name for the section to add
 		'Buehler Theme Settings', //section title visible on the page
 		'theme_section_description', //callback for section description
-		'Reading'//page to which section will be added.
+		'Cbuehlerli Theme'//page to which section will be added.
 	);
 
 	add_settings_field (
 		'first_field_option', //ID for the settings field to add
 		'TestField', //settings title visible on the page
 		'options_callback', //callback for displaying the settings field
-		'Reading', // settings page to where option is displayed
+		'Cbuehlerli Theme', // settings page to where option is displayed
 		'first_section'// section id for parent section.
 	);
 } 
