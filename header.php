@@ -24,7 +24,7 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
                 <img src="<?php echo $image[0]; ?>" alt="cbuehler">
             </div>
             <span class="flex"></span>
-            <div class="menu-btn" onclick="document.body.classList.toggle('show-menu')">
+            <div class="nav-btn" onclick="document.body.classList.toggle('show-menu')">
                 Close
                 <i class="material-icons">close</i>
             </div>
@@ -32,6 +32,9 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
         <nav>
             <div class="article">
                 Create Reactive Structure With Flutter Blueprint
+                <div class="tagline">
+                    June 2020
+                </div>
             </div>
         </nav>
     </div>
@@ -40,7 +43,7 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
             <img src="<?php echo $image[0]; ?>" alt="cbuehler">
         </div>
         <span class="flex"></span>
-        <div class="menu-btn nav-btn" onclick="document.body.classList.toggle('show-menu')">
+        <div class="nav-btn" onclick="document.body.classList.toggle('show-menu')">
             Articles
         </div>
         <a href="/about-me" class="nav-btn">

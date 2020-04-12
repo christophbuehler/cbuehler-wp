@@ -209,11 +209,15 @@ body {
     }
 
     .article {
-        background-image: url('https://cbuehler.li/wp-content/uploads/2020/01/tiger-2048x1314.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 80px;
-        height: 80px;
+        // background-image: url('https://cbuehler.li/wp-content/uploads/2020/01/tiger-2048x1314.jpg');
+        // background-repeat: no-repeat;
+        // background-size: cover;
+
+        
+        .tagline {
+            line-height: 28px;
+            color: rgba(255,255,255,.8);
+        }
     }
 
     header.top {

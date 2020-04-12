@@ -57,10 +57,10 @@
 	</div>
 	<div class="block">
 		<div class="fx-row fx-end">
-			<div class="btn">
+			<!-- <div class="btn">
 				Convert cyber space into neutral
 				<i class="material-icons">arrow_forward</i>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </article>
