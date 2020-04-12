@@ -72,6 +72,6 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
         </nav>
         <span class="flex"></span>
         <div>
-            Christoph B&uuml;hler
+            <?php get_bloginfo('name')?>
         </div>
     </header>
