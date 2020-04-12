@@ -90,12 +90,14 @@ endif;
 add_action( 'after_setup_theme', 'cbuehlerli_setup' );
 add_action('admin_menu', 'add_cbuehlerli_menu');
 function add_cbuehlerli_menu() {
-	add_menu_page(
-		'Cbuehlerli Theme',
-		'Cbuehlerli Theme',
-		'manage_options',
-		'cbuehlerli_theme'
-	);
+	add_menu_page( 'Wholesale Pricing', 'Wholesale', 'manage_options', 'woo-wholesale', 'woo_wholesale_page_call');
+    add_submenu_page( 'woo-wholesale', 'Registrations', 'Registrations', 'manage_options', 'woo-wholesale-registrations', 'wwpr_page_call' );
+	// add_menu_page(
+	// 	'Cbuehlerli Theme',
+	// 	'Cbuehlerli Theme',
+	// 	'manage_options',
+	// 	'cbuehlerli_theme'
+	// );
 
     // add_settings_section (
 	// 	'cbuehlerli_design', //section name for the section to add
