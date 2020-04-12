@@ -88,8 +88,8 @@ if ( ! function_exists( 'cbuehlerli_setup' ) ) :
 	}
 endif;
 add_action( 'after_setup_theme', 'cbuehlerli_setup' );
-add_action('admin_init', 'add_settings');
-function add_settings() {
+add_action('admin_menu', 'add_cbuehlerli_menu');
+function add_cbuehlerli_menu() {
 	add_menu_page(
 		'Cbuehlerli Theme',
 		'Cbuehlerli Theme',
