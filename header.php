@@ -41,24 +41,18 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
                 while ($post_query->have_posts()) {
                     $post_query->the_post();
             ?>
-                    <div class="article">
+                    <a href="<?php the_permalink(); ?>" class="article">
                         <?php the_title(); ?>
                         <div class="tagline">
                             <?php
                             echo get_the_date('F Y');
                             ?>
                         </div>
-                    </div>
+                    </a>
             <?php
                 }
             }
             ?>
-            <!-- <div class="article">
-                Create Reactive Structure With Flutter Blueprint
-                <div class="tagline">
-                    June 2020
-                </div>
-            </div> -->
         </nav>
     </div>
     <header class="top white fx-row fx-center">
