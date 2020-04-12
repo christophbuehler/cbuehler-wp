@@ -82,10 +82,6 @@ if ( ! function_exists( 'cbuehlerli_setup' ) ) :
 
 		
 	}
-
-	function theme_section_description () {
-		echo '<p>Settings for your theme.</p>';
-	}
 endif;
 add_action( 'after_setup_theme', 'cbuehlerli_setup' );
 add_action('admin_menu', 'add_cbuehlerli_menu');
@@ -105,6 +101,8 @@ function add_cbuehlerli_menu() {
 		'cbuehler-theme-design',
 		'cbuehler_design_page_call'
 	);
+	function cbuehler_page_call() {}
+	function cbuehler_design_page_call() {}
 	// add_menu_page(
 	// 	'Cbuehlerli Theme',
 	// 	'Cbuehlerli Theme',
