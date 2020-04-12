@@ -84,6 +84,7 @@ body {
             font-size: 32px;
             flex: 0 0 48px;
         }
+
         >div {
             font-size: 18px;
             line-height: 24px;
@@ -120,7 +121,19 @@ body {
         nav {
             text-align: left;
             display: inline-block;
-            width: 320px;
+            max-width: 320px;
+
+            .article {
+                // background-image: url('https://cbuehler.li/wp-content/uploads/2020/01/tiger-2048x1314.jpg');
+                // background-repeat: no-repeat;
+                // background-size: cover;
+                margin-bottom: 16px;
+
+                .tagline {
+                    line-height: 28px;
+                    color: rgba(255, 255, 255, .6);
+                }
+            }
         }
     }
 
@@ -208,17 +221,6 @@ body {
         }
     }
 
-    .article {
-        // background-image: url('https://cbuehler.li/wp-content/uploads/2020/01/tiger-2048x1314.jpg');
-        // background-repeat: no-repeat;
-        // background-size: cover;
-
-        .tagline {
-            line-height: 28px;
-            color: rgba(255,255,255,.8);
-        }
-    }
-
     header.top {
         position: fixed;
         left: 0;
@@ -231,8 +233,7 @@ body {
         color: rgba(255, 255, 255, .8);
         z-index: 1;
 
-        .menu-btn {
-        }
+        .menu-btn {}
 
         .nav-btn {
             cursor: pointer;
