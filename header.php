@@ -7,7 +7,7 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;400;500&display=swap|Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <?php wp_enqueue_script('script', get_template_directory_uri() . '/assets/cbuehler.min.js', [], '1.0.6'); ?>
+    <?php wp_enqueue_script('script', get_template_directory_uri() . '/assets/cbuehler.min.js', [], '1.0.7'); ?>
 </head>
 
 <?php
