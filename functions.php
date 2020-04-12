@@ -94,17 +94,17 @@ function add_cbuehlerli_menu() {
 		'Cbuehler Theme',
 		'Cbuehler Theme',
 		'manage_options',
-		'cbuehler-theme'
-		// 'woo_wholesale_page_call'
+		'cbuehler-theme',
+		'cbuehler_page_call'
 	);
-    // add_submenu_page(
-	// 	'cbuehler-theme',
-	// 	'Registrations',
-	// 	'Registrations',
-	// 	'manage_options',
-	// 	'woo-wholesale-registrations',
-	// 	'wwpr_page_call'
-	// );
+    add_submenu_page(
+		'cbuehler-theme',
+		'Registrations',
+		'Registrations',
+		'manage_options',
+		'cbuehler-theme-design',
+		'cbuehler_design_page_call'
+	);
 	// add_menu_page(
 	// 	'Cbuehlerli Theme',
 	// 	'Cbuehlerli Theme',
