@@ -95,7 +95,7 @@ function add_settings() {
 		'Christoph Buehler Theme',
 		'manage_options',
 		'cbuehler_theme',
-		'testTheme_create_page',
+		'testTheme_create_page'
 	);
 
     add_settings_section (
