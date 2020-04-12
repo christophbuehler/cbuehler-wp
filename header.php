@@ -72,6 +72,6 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
         </nav>
         <span class="flex"></span>
         <div>
-            <?php get_bloginfo('name')?>
+            <?php echo get_bloginfo('name')?>
         </div>
     </header>
