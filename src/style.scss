@@ -129,9 +129,13 @@ body {
                 // background-size: cover;
                 margin-bottom: 16px;
 
+                &:active {
+                    background-color: rgba(255, 255, 255, .1);
+                }
+
                 .tagline {
                     line-height: 28px;
-                    color: rgba(255, 255, 255, .6);
+                    color: #666;
                 }
             }
         }

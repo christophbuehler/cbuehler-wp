@@ -1,9 +1,9 @@
 <?php
 get_header();
 
-if ( is_front_page() ) :
-    get_template_part('template-parts/content', 'home');
-else :
+// if ( is_front_page() ) :
+//     get_template_part('template-parts/content', 'home');
+// else :
     if (have_posts()) :
         while (have_posts()) :
             the_post();
@@ -11,8 +11,8 @@ else :
     
         endwhile;
     endif;
-endif;
-?>asdasdadas
+// endif;
+?>
 
 <?php wp_footer(); ?>
 
