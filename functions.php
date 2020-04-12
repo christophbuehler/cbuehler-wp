@@ -93,16 +93,16 @@ function add_cbuehlerli_menu() {
 		'cbuehler-theme',
 		'cbuehler_page_call'
 	);
-    add_submenu_page(
-		'cbuehler-theme',
-		'Registrations',
-		'Registrations',
-		'manage_options',
-		'cbuehler-theme-design',
-		'cbuehler_design_page_call'
-	);
+    // add_submenu_page(
+	// 	'cbuehler-theme',
+	// 	'Registrations',
+	// 	'Registrations',
+	// 	'manage_options',
+	// 	'cbuehler-theme-design',
+	// 	'cbuehler_design_page_call'
+	// );
 	function cbuehler_page_call() {}
-	function cbuehler_design_page_call() {}
+	// function cbuehler_design_page_call() {}
 	// add_menu_page(
 	// 	'Cbuehlerli Theme',
 	// 	'Cbuehlerli Theme',
@@ -110,12 +110,16 @@ function add_cbuehlerli_menu() {
 	// 	'cbuehlerli_theme'
 	// );
 
-    // add_settings_section (
-	// 	'cbuehlerli_design', //section name for the section to add
-	// 	'Buehler Theme Settings', //section title visible on the page
-	// 	'theme_section_description', //callback for section description
-	// 	'Cbuehlerli Theme'//page to which section will be added.
-	// );
+    add_settings_section (
+		'cbuehlerli_design', //section name for the section to add
+		'Design', //section title visible on the page
+		'theme_section_description', //callback for section description
+		'cbuehler-theme'//page to which section will be added.
+	);
+
+	function theme_section_description() {
+		echo 'Design theme.';
+	}
 
 	// add_settings_field (
 	// 	'first_field_option', //ID for the settings field to add
