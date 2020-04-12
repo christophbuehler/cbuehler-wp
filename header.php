@@ -30,17 +30,7 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
             </div>
         </header>
         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li>Articles
-                    <ul>
-                        <li><a href="#">Frontend</a></li>
-                        <li><a href="#">Product Design</a></li>
-                        <li><a href="#">Algorithms</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">About Me</a></li>
-            </ul>
+            ARTICLES
         </nav>
     </div>
     <header class="top white fx-row fx-center">
@@ -49,10 +39,13 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
         </div>
         <span class="flex"></span>
         <div class="menu-btn" onclick="document.body.classList.toggle('show-menu')">
-            Menu
+            Articles
         </div>
+        <a href="/about-me" class="nav-btn">
+            About Me
+        </a>
     </header>
-    <header class="left">
+    <!-- <header class="left">
         <div>
             <div class="logo">
                 <img src="<?php echo $image[0]; ?>" alt="cbuehler">
@@ -60,7 +53,7 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
         </div>
         <nav>
             <ul>
-                <!-- <li><a href="#">Home</a></li> -->
+                <li><a href="#">Home</a></li>
                 <li>Articles
                     <ul>
                         <li><a href="#">Frontend</a></li>
@@ -75,4 +68,4 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
         <div>
             <?php echo get_bloginfo('name')?>
         </div>
-    </header>
+    </header> -->

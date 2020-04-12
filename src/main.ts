@@ -33,6 +33,7 @@ function bg() {
   let points: Point[][];
   let cPos: V2;
   let target: V2;
+  const s = 20;
 
   function update() {
     ++time;
@@ -40,39 +41,21 @@ function bg() {
     canvas.height = canvas.clientHeight;
     const dim = new V2(canvas.width, canvas.height);
     const center = dim.div(V2.xy(2));
-    // mPos = mPos ?? center;
     cPos = cPos ?? center;
-    points = points ?? getPointGrid(20, dim);
+    points = points ?? getPointGrid(s, dim);
     ctx.clearRect(0, 0, dim.x, dim.y);
 
     points.forEach(a => a.forEach(p => p.update(cPos)));
-
 
     if (!target || target.sub(cPos).hyp() < 4) {
       target = dim.dot(new V2(Math.random(), Math.random()));
     }
     cPos = target.sub(cPos).len(4).add(cPos);
-
-    // const mMoving = center
-    //   .add(mPos.sub(center).len(80));
-
-    // drawPoint(mPos);
-    // drawPoint(center);
-    // drawPoint(moving);
-    // drawPoint(mMoving);
-
     points.forEach(col => {
-      // ctx.beginPath();
       col.forEach((point, i) => {
         if (point.color === 'transparent') return;
-        // ctx[i === 0 ? 'moveTo' : 'lineTo'](point.pos.x, point.pos.y);
-        point.draw(ctx);
+        point.draw(ctx, s);
       });
-      // ctx.strokeStyle = '#333';
-      // ctx.lineWidth = 2;
-      // ctx.stroke();
-      // ctx.closePath();
-      // drawPoint(p.pos)
     });
   }
 
@@ -88,9 +71,9 @@ function bg() {
     const rows = Array.from(Array(~~(dim.y / s) + 1)).map((_, i) => i);
     const cols = Array.from(Array(~~(dim.x / s) + 1)).map((_, i) => i);
     return rows
-      .map(r => cols
-        .filter(() => Math.random() > .8)
-        .map(c => new Point(new V2(c * s, r * s))));
+      .map((r, i) => cols
+        .filter(() => Math.random() > 0)
+        .map(c => new Point(new V2((c  + (i % 2) * .5) * s, (r) * s))));
   }
 }
 
@@ -105,28 +88,38 @@ class Point {
     this.initialPos = pos;
   }
 
-  draw(ctx: CanvasRenderingContext2D) {
+  draw(ctx: CanvasRenderingContext2D, s: number) {
     ctx.beginPath();
     ctx.save();
     ctx.translate(this.pos.x, this.pos.y);
 
-    ctx.moveTo(-4, -4);
-    ctx.lineTo(4, 4);
-    ctx.moveTo(4, -4);
-    ctx.lineTo(-4, 4);
+    s = s - 4;
 
-    ctx.strokeStyle = '#0029f2';
-    ctx.stroke();
-    // ctx.fillRect(0,0,4,4);
-    ctx.restore();
+    const hs = s;
+
+    ctx.moveTo(-s * .5, hs * .5);
+    ctx.lineTo(-s * .5, -hs * .5);
+
+    ctx.lineTo(0, -hs * .5);
+
+    ctx.lineTo(s * .5, -hs * .5);
+    ctx.lineTo(s * .5, hs * .5);
+
     ctx.closePath();
+
+    // ctx.lineTo(-s * .5, 0);
+    // ctx.moveTo(-4, -4);
+    // ctx.lineTo(4, 4);
+    // ctx.moveTo(4, -4);
+    // ctx.lineTo(-4, 4);
+
+    // ctx.lineWidth = .5;
+    ctx.strokeStyle = this.color;
+    ctx.stroke();
+    ctx.restore();
   }
 
   update(mPos: V2) {
-    // const deltaMPos = mPos.sub(this.pos);
-    // const mForce = deltaMPos.div(
-    //   V2.xy(Math.pow(deltaMPos.hyp(), 3) * -.1),
-    // );
     const len = 140;
     const deltaPos = this.initialPos
       .sub(mPos);
@@ -134,7 +127,8 @@ class Point {
     if (deltaPos.hyp() > len + 120) {
       this.color = 'transparent';
     } else {
-      this.color = 'white';
+      const alpha = ((len - deltaPos.hyp()) / len);
+      this.color = `rgba(255,255,255,${Math.max(alpha, .2)})`;
     }
 
 

@@ -6,9 +6,9 @@
 
 get_header();
 
-if (is_front_page()) :
-    get_template_part('template-parts/content', 'front-page');
-else :
+// if (is_front_page()) :
+//     get_template_part('template-parts/content', 'front-page');
+// else :
     if (have_posts()) :
         while (have_posts()) :
             the_post();
@@ -18,7 +18,7 @@ else :
     else :
         echo 'Here should be a page.';
     endif;
-endif;
+// endif;
 
 get_footer();
 
