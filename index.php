@@ -12,8 +12,10 @@ get_header();
         endwhile;
     endif;
 // endif;
-?>
 
+echo get_post_type();
+?>
+test
 <?php wp_footer(); ?>
 
 <script>
