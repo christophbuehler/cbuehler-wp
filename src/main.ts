@@ -16,7 +16,8 @@ function ready() {
 function handleScroll() {
   const { scrollTop, scrollHeight, clientHeight } = document.scrollingElement;
   const bias = 4;
-  const isReading = (scrollTop > bias) && (scrollHeight - scrollTop - clientHeight > bias);
+  const isReading = (scrollTop > bias);
+  // const isReading = (scrollTop > bias) && (scrollHeight - scrollTop - clientHeight > bias);
   document.body.classList.toggle('reading', isReading);
 }
 

@@ -18,7 +18,7 @@ body {
     font-family: 'Prompt', sans-serif;
     margin: 0;
     padding: 0;
-    background: black;
+    background: #0d0d0d;
     color: var(--content-color);
 
     @media all and (max-width: 1200px) {
@@ -29,7 +29,8 @@ body {
         @include fixed-header;
     }
 
-    &.reading:not(.fixed-header) {
+    // :not(.fixed-header)
+    &.reading {
         --content-color: rgba(0, 0, 0, .8);
         background: #fff;
 
@@ -132,6 +133,13 @@ body {
         }
     }
 
+    .title-bold {
+        font-size: 140px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 140px;
+    }
+
     .logo {
         text-align: center;
         width: 48px;
@@ -172,6 +180,10 @@ body {
         }
     }
 
+    .who-me {
+        
+    }
+
     header.top {
         position: fixed;
         left: 0;
@@ -189,6 +201,18 @@ body {
             display: inline-block;
             font-weight: 500;
             font-size: 16px;
+
+            >.material-icons {
+                vertical-align: middle;
+            }
+        }
+
+        .nav-btn {
+            cursor: pointer;
+            display: inline-block;
+            font-weight: 400;
+            font-size: 16px;
+            margin-left: 32px;
 
             >.material-icons {
                 vertical-align: middle;

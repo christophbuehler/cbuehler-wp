@@ -15,7 +15,7 @@
     </script>
 </head>
 
-<body>
+<body class="fixed-header">
     <canvas class="bg"></canvas>
     <div class="menu">
         <header class="top fx-row fx-center">
@@ -47,9 +47,15 @@
             <img src="assets/logocbuehler.svg" alt="cbuehler">
         </div>
         <span class="flex"></span>
-        <div class="menu-btn" onclick="document.body.classList.toggle('show-menu')">
-            Menu
+        <div class="nav-btn">
+            articles
         </div>
+        <div class="nav-btn">
+            about me
+        </div>
+        <!-- <div class="menu-btn" onclick="document.body.classList.toggle('show-menu')">
+            Menu
+        </div> -->
     </header>
     <header class="left">
         <div>
@@ -67,7 +73,7 @@
                         <li><a href="#">Algorithms</a></li>
                     </ul>
                 </li>
-                <li><a href="#">About Me</a></li>
+                <li><a href="#">About</a></li>
             </ul>
         </nav>
         <span class="flex"></span>
@@ -75,6 +81,11 @@
             Christoph B&uuml;hler
         </div>
     </header>
+    <article>
+       <div class="block-wide">
+           <div class="title-bold">An unexpected Front Page has appeared</div>
+       </div>
+    </article>
     <article>
         <div class="block">
             <h1>Creating a Simple Store<br>Architecture in Flutter</h1>
@@ -173,15 +184,6 @@ console.log('hello');
 
             </div>
         </div>
-        <div class="block">
-            <div class="fx-row fx-end">
-                <div class="btn">
-                    Convert cyber space into neutral
-                    <i class="material-icons">arrow_forward</i>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="banner"></div> -->
     </article>
     <!-- <article></article> -->
     <!-- <article></article> -->

@@ -16,7 +16,7 @@ $custom_logo_id = get_theme_mod('custom_logo');
 $image = wp_get_attachment_image_src($custom_logo_id, 'full');
 ?>
 
-<body <?php body_class(is_front_page() ? 'fixed-header' : ''); ?>>
+<body <?php body_class(is_front_page() ? 'fixed-header' : 'fixed-header'); ?>>
     <canvas class="bg"></canvas>
     <div class="menu">
         <header class="top fx-row fx-center">
