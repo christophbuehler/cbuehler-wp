@@ -31,8 +31,6 @@
 			</div>
 		<?php endif; ?>
 
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/tiger.jpg" alt="tiger" class="hero">
-
 		<?php cbuehlerli_post_thumbnail(); ?>
 
 		<div class="content">
