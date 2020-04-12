@@ -90,8 +90,16 @@ endif;
 add_action( 'after_setup_theme', 'cbuehlerli_setup' );
 add_action('admin_init', 'add_settings');
 function add_settings() {
+	add_menu_page(
+		'Christoph Buehler Theme',
+		'Christoph Buehler Theme',
+		'manage_options',
+		'cbuehler_theme',
+		'testTheme_create_page',
+	);
+
     add_settings_section (
-		'theme_section', //section name for the section to add
+		'cbuehler_theme', //section name for the section to add
 		'Buehler Theme Settings', //section title visible on the page
 		'theme_section_description', //callback for section description
 		'Reading'//page to which section will be added.
