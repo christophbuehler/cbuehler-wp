@@ -20,9 +20,9 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
     <canvas class="bg"></canvas>
     <div class="menu">
         <header class="top fx-row fx-center">
-            <div class="logo">
+            <a href="/" class="logo">
                 <img src="<?php echo $image[0]; ?>" alt="cbuehler">
-            </div>
+            </a>
             <span class="flex"></span>
             <div class="nav-btn" onclick="document.body.classList.toggle('show-menu')">
                 Close
@@ -30,12 +30,35 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
             </div>
         </header>
         <nav>
-            <div class="article">
+            <?php
+            $args = array(
+                'post_type' => 'post'
+            );
+
+            $post_query = new WP_Query($args);
+
+            if ($post_query->have_posts()) {
+                while ($post_query->have_posts()) {
+                    $post_query->the_post();
+            ?>
+                    <div class="article">
+                        <?php the_title(); ?>
+                        <div class="tagline">
+                            <?php
+                            echo get_the_date('F Y');
+                            ?>
+                        </div>
+                    </div>
+            <?php
+                }
+            }
+            ?>
+            <!-- <div class="article">
                 Create Reactive Structure With Flutter Blueprint
                 <div class="tagline">
                     June 2020
                 </div>
-            </div>
+            </div> -->
         </nav>
     </div>
     <header class="top white fx-row fx-center">
@@ -50,27 +73,3 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
             About Me
         </a>
     </header>
-    <!-- <header class="left">
-        <div>
-            <div class="logo">
-                <img src="<?php echo $image[0]; ?>" alt="cbuehler">
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li>Articles
-                    <ul>
-                        <li><a href="#">Frontend</a></li>
-                        <li><a href="#">Product Design</a></li>
-                        <li><a href="#">Algorithms</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">About Me</a></li>
-            </ul>
-        </nav>
-        <span class="flex"></span>
-        <div>
-            <?php echo get_bloginfo('name')?>
-        </div>
-    </header> -->
