@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="theme-color" content="#000a32">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;400;500&display=swap|Material+Icons" rel="stylesheet">

@@ -63,6 +63,15 @@ body {
         }
     }
 
+    pre {
+        color: #fff;
+        background: #111;
+        border-radius: 8px;
+        padding: 16px;
+        font-size: .7em;
+        overflow: auto;
+    }
+
     .pd0 {
         padding: 0;
     }
