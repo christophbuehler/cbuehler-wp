@@ -27,7 +27,6 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
             <span class="flex"></span>
             <div class="nav-btn" onclick="document.body.classList.toggle('show-menu')">
                 Close
-                <i class="material-icons">close</i>
             </div>
         </header>
         <nav>
