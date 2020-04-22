@@ -23,62 +23,31 @@
                 <img src="assets/logocbuehler.svg" alt="cbuehler">
             </div>
             <span class="flex"></span>
-            <div class="menu-btn" onclick="document.body.classList.toggle('show-menu')">
+            <div class="nav-btn" onclick="document.body.classList.toggle('show-menu')">
                 Close
-                <i class="material-icons">close</i>
             </div>
         </header>
         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li>Articles
-                    <ul>
-                        <li><a href="#">Frontend</a></li>
-                        <li><a href="#">Product Design</a></li>
-                        <li><a href="#">Algorithms</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">About Me</a></li>
-            </ul>
+            <div class="art-title">Articles</div>
+            <a href="#" class="article">
+                This is an Article Title
+                <div class="tagline">
+                    July 2020
+                </div>
+            </a>
         </nav>
     </div>
-    <header class="top white fx-row fx-center">
-        <div class="logo">
+    <div class="backdrop" onclick="document.body.classList.toggle('show-menu')"></div>
+    <header class="top main white fx-row fx-center">
+        <div class="logo main">
             <img src="assets/logocbuehler.svg" alt="cbuehler">
         </div>
         <span class="flex"></span>
-        <!-- <div class="nav-btn">
-            Articles
-        </div> -->
-        <div class="menu-btn" onclick="document.body.classList.toggle('show-menu')">
+        <div class="nav-btn" onclick="document.body.classList.toggle('show-menu')">
             Articles
         </div>
         <div class="nav-btn">
             About
-        </div>
-    </header>
-    <header class="left">
-        <div>
-            <div class="logo">
-                <img src="assets/logocbuehler.svg" alt="cbuehler">
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li>Articles
-                    <ul>
-                        <li><a href="#">Frontend</a></li>
-                        <li><a href="#">Product Design</a></li>
-                        <li><a href="#">Algorithms</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </nav>
-        <span class="flex"></span>
-        <div>
-            Christoph B&uuml;hler
         </div>
     </header>
     <article class="pd0 fx-col">

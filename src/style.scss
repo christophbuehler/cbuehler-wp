@@ -4,7 +4,11 @@
 
     &.show-menu {
         --menu-pointer-events: all;
+        --backdrop-pointer-events: all;
+        --backdrop-background: rgba(255,255,255,.7);
+        --menu-transform: translate(0, 0);
         --menu-opacity: 1;
+        --main-logo-display: none;
     }
 }
 
@@ -12,8 +16,14 @@ body {
     --content-color: rgba(255, 255, 255, .8);
     --header-left-display: flex;
     --header-top-transform: translate(0, -100%);
+    --menu-transform: translate(120px, 0);
     --menu-pointer-events: none;
+    --menu-max-width: 280px;
+    --backdrop-display: block;
+    --backdrop-pointer-events: none;
+    --backdrop-background: transparent;
     --menu-opacity: 0;
+    --main-logo-display: block;
 
     font-family: 'Prompt', sans-serif;
     margin: 0;
@@ -25,12 +35,16 @@ body {
         @include fixed-header;
     }
 
+    @media all and (max-width: 420px) {
+        --menu-max-width: 100%;
+    }
+
     &.fixed-header {
         @include fixed-header;
     }
 
-    // :not(.fixed-header)
     &.reading {
+        --backdrop-display: none;
         --content-color: rgba(0, 0, 0, .8);
         background: #fff;
 
@@ -42,19 +56,19 @@ body {
             display: none;
         }
 
-        .nav-btn {
-            color: #000;
-        }
-
         header.top {
             height: 60px;
+        }
 
+        header.main {
             &.white {
                 color: rgba(0, 0, 0, .8);
                 background: #fff;
             }
 
-            // --header-top-transform: translate(0, 0);
+            .nav-btn {
+                color: #000;
+            }
         }
     }
 
@@ -72,8 +86,8 @@ body {
 
     pre {
         color: #fff;
-        background: #111;
-        border-radius: 8px;
+        background: #000;
+        border-radius: 0;
         padding: 16px;
         font-size: .7em;
         overflow: auto;
@@ -81,6 +95,18 @@ body {
 
     .pd0 {
         padding: 0;
+    }
+    
+    .backdrop {
+        display: var(--backdrop-display);
+        pointer-events: var(--backdrop-pointer-events);
+        background-color: var(--backdrop-background);
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transition: background-color .2s ease;
     }
 
     .scroll-to-article {
@@ -125,29 +151,58 @@ body {
         z-index: 2;
         transition: all .2s ease;
         position: fixed;
-        left: 0;
+        right: 0;
         top: 0;
         width: 100%;
         height: 100%;
         box-sizing: border-box;
-        background: black;
-        color: rgba(255, 255, 255, .8);
+        background: #f9f9f9;
+        color: #000;
         text-align: center;
-        padding: 128px 32px 0 32px;
+        padding: 0 32px;
+        transform: var(--menu-transform);
+        max-width: var(--menu-max-width);
+
+        .logo {
+            background: #000;
+
+            img {
+                filter: invert(1);
+            }
+        }
+
+        header.top {
+            color: #000;
+            position: static;
+            padding: 0;
+        }
 
         nav {
             text-align: left;
-            display: inline-block;
-            max-width: 320px;
 
-            .article {
-                // background-image: url('https://cbuehler.li/wp-content/uploads/2020/01/tiger-2048x1314.jpg');
-                // background-repeat: no-repeat;
-                // background-size: cover;
+            .art-title {
+                display: block;
+                line-height: 28px;
+                height: 28px;
+                text-align: left;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 1px;
+                margin-top: 32px;
+                margin-bottom: 8px;
+            }
+
+            a.article {
+                font-size: 16px;
+                display: block;
+                text-decoration: none;
+                color: inherit;
+                cursor: pointer;
                 margin-bottom: 16px;
+                padding: 16px 0;
 
                 &:active {
-                    background-color: rgba(255, 255, 255, .1);
+                    box-shadow: 0 0 1px 4px rgba(240,240,255,.8);
                 }
 
                 .tagline {
@@ -155,43 +210,6 @@ body {
                     color: #666;
                 }
             }
-        }
-    }
-
-    nav {
-        margin-top: 64px;
-
-        >ul {
-            padding: 0;
-
-            li {
-                list-style: none;
-                font-size: 15px;
-                font-weight: 500;
-                line-height: 40px;
-                color: inherit;
-
-                >a {
-                    cursor: pointer;
-                    color: inherit;
-                    text-decoration: none;
-                    display: inline-block;
-                    border-bottom: 2px solid transparent;
-                    border-top: 2px solid transparent;
-                    line-height: 22px;
-
-                    &:hover {
-                        border-bottom-color: var(--content-color);
-                    }
-                }
-            }
-
-            >li {
-                >ul {
-                    padding: 0 32px 16px 32px;
-                }
-            }
-
         }
     }
 
@@ -207,6 +225,10 @@ body {
         width: 48px;
         height: 48px;
         background: #fff;
+
+        &.main {
+            display: var(--main-logo-display);
+        }
 
         img {
             height: 30px;
@@ -254,12 +276,13 @@ body {
         z-index: 1;
 
         .nav-btn {
+            line-height: 24px;
             cursor: pointer;
             display: inline-block;
             font-weight: 700;
             font-size: 12px;
             margin-left: 32px;
-            letter-spacing: .5px;
+            letter-spacing: 1px;
             color: inherit;
             text-decoration: none;
             text-transform: uppercase;

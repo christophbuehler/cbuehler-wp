@@ -1,5 +1,4 @@
 import "./style.scss";
-import { Store, State } from "./store";
 import { V2 } from './v2';
 
 export default () => {
@@ -106,14 +105,6 @@ class Point {
     ctx.lineTo(s * .5, hs * .5);
 
     ctx.closePath();
-
-    // ctx.lineTo(-s * .5, 0);
-    // ctx.moveTo(-4, -4);
-    // ctx.lineTo(4, 4);
-    // ctx.moveTo(4, -4);
-    // ctx.lineTo(-4, 4);
-
-    // ctx.lineWidth = .5;
     ctx.strokeStyle = this.color;
     ctx.stroke();
     ctx.restore();
@@ -131,22 +122,13 @@ class Point {
       this.color = `rgba(255,255,255,${Math.max(alpha, .2)})`;
     }
 
-
     if (deltaPos.hyp() > len) {
       this.pos = this.initialPos;
       return;
     }
 
-
     const height = 40;
-
     this.pos = this.initialPos
       .add(new V2(0, -((1 - deltaPos.hyp() / len)) * height));
-    // deltaPos
-    //   .len(deltaPos.hyp() / 2)
-    //   .add(mPos);
-
-    // this.vel = this.vel.add(force);
-    // this.pos = this.pos.add(this.vel);
   }
 }

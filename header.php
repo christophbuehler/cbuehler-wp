@@ -31,6 +31,8 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
             </div>
         </header>
         <nav>
+            <div class="art-title">Articles</div>
+
             <?php
             $args = array(
                 'post_type' => 'post'
@@ -56,8 +58,9 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
             ?>
         </nav>
     </div>
-    <header class="top white fx-row fx-center">
-        <div class="logo">
+    <div class="backdrop" onclick="document.body.classList.toggle('show-menu')"></div>
+    <header class="top main white fx-row fx-center">
+        <div class="logo main">
             <img src="<?php echo $image[0]; ?>" alt="cbuehler">
         </div>
         <span class="flex"></span>
