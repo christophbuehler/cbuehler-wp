@@ -8,7 +8,6 @@
         --backdrop-background: rgba(255,255,255,.7);
         --menu-transform: translate(0, 0);
         --menu-opacity: 1;
-        --main-logo-display: none;
     }
 }
 
@@ -23,7 +22,6 @@ body {
     --backdrop-pointer-events: none;
     --backdrop-background: transparent;
     --menu-opacity: 0;
-    --main-logo-display: block;
 
     font-family: 'Prompt', sans-serif;
     margin: 0;
@@ -225,10 +223,6 @@ body {
         width: 48px;
         height: 48px;
         background: #fff;
-
-        &.main {
-            display: var(--main-logo-display);
-        }
 
         img {
             height: 30px;
