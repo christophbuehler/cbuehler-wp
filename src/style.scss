@@ -32,7 +32,7 @@ body {
     // :not(.fixed-header)
     &.reading {
         --content-color: rgba(0, 0, 0, .8);
-        background: #f9f9f9;
+        background: #fff;
 
         .block {
             background: #fff;
@@ -40,6 +40,10 @@ body {
 
         .bg {
             display: none;
+        }
+
+        .nav-btn {
+            color: #000;
         }
 
         header.top {
@@ -203,7 +207,6 @@ body {
         width: 48px;
         height: 48px;
         background: #fff;
-        opacity: .8;
 
         img {
             height: 30px;
@@ -250,16 +253,16 @@ body {
         color: rgba(255, 255, 255, .8);
         z-index: 1;
 
-        .menu-btn {}
-
         .nav-btn {
             cursor: pointer;
             display: inline-block;
-            font-weight: 400;
-            font-size: 16px;
+            font-weight: 700;
+            font-size: 12px;
             margin-left: 32px;
+            letter-spacing: .5px;
             color: inherit;
             text-decoration: none;
+            text-transform: uppercase;
 
             >.material-icons {
                 vertical-align: middle;
