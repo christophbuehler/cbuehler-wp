@@ -27,7 +27,7 @@ function bg() {
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
 
-  setInterval(() => sticks.update(), 20);
+  setInterval(() => sticks.update(), 80);
   paint();
   function paint() {
     sticks.paint();
