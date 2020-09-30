@@ -451,6 +451,10 @@ body {
         padding: 0;
     }
 
+    .has-media-on-the-right {
+        background: var(--content-contrast-background);
+    }
+
     .wp-block-image {
         margin: 0;
         overflow: hidden;
