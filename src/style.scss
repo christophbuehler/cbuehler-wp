@@ -24,7 +24,7 @@ body {
     --backdrop-background: transparent;
     --menu-opacity: 0;
 
-    font-family: 'Prompt', sans-serif;
+    font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
     margin: 0;
     padding: 0;
     background: #000a32;
@@ -425,10 +425,16 @@ body {
     }
 
     .wp-block-image {
+        margin: 0;
+
         img {
             max-width: 100%;
             width: auto !important;
             height: auto !important;
+        }
+
+        figcaption {
+            color: #aaa; 
         }
     }
 

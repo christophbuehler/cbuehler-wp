@@ -6,8 +6,7 @@
     <meta name="theme-color" content="#000a32">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;400;500&display=swap|Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <?php wp_enqueue_script('script', get_template_directory_uri() . '/assets/cbuehler.min.js', [], '1.0.8'); ?>
     <?php wp_head(); ?>
 </head>
