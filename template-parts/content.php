@@ -11,14 +11,16 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="block">
-
 		<?php
-		if (is_singular()) :
-			the_title('<h1>', '</h1>');
-		else :
-			the_title('<h1>', '</h1>');
-		endif;
-
+			if (is_singular()) :
+				the_title('<h1>', '</h1>');
+			else :
+				the_title('<h1>', '</h1>');
+			endif;
+		?>
+	</div>
+	<div class="block">
+		<?php
 		if ('post' === get_post_type()) :
 		?>
 
