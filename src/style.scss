@@ -23,6 +23,7 @@ body {
     --backdrop-pointer-events: none;
     --backdrop-background: transparent;
     --menu-opacity: 0;
+    --comment-submit-width: auto;
 
     font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
     margin: 0;
@@ -36,6 +37,7 @@ body {
 
     @media all and (max-width: 420px) {
         --menu-max-width: 100%;
+        --comment-submit-width: 100%;
     }
 
     &.fixed-header {
@@ -490,22 +492,25 @@ body {
             }
         }
 
-        .submit {
-            width: auto;
-            display: inline-block;
-            line-height: 42px;
-            height: 42px;
-            // border: 1px solid rgba(255,255,255,.1);
-            font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
-            font-size: 16px;
-            text-transform: uppercase;
-            background: rgb(41, 41, 41);
-            color: #fff;
-            font-weight: 500;
-            letter-spacing: 1px;
+        .form-submit {
+            margin-top: 16px;
 
-            &:active {
-                box-shadow: 0 0 0 2px #f2f2f2, 0 0 0 8px #fafafa;
+            .submit {
+                display: inline-block;
+                line-height: 42px;
+                height: 42px;
+                font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
+                font-size: 16px;
+                background: rgb(41, 41, 41);
+                color: #fff;
+                font-weight: 500;
+                box-sizing: border-box;
+                letter-spacing: 1px;
+                width: var(--comment-submit-width);
+    
+                &:active {
+                    box-shadow: 0 0 0 8px rgba(30, 0, 20, .1), 0 0 0 16px rgba(30, 0, 20, .1);
+                }
             }
         }
     }
