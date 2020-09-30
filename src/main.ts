@@ -13,10 +13,9 @@ function ready() {
 }  
 
 function handleScroll() {
-  const { scrollTop, scrollHeight, clientHeight } = document.scrollingElement;
+  const { scrollTop } = document.scrollingElement;
   const bias = 4;
   const isReading = (scrollTop > bias);
-  // const isReading = (scrollTop > bias) && (scrollHeight - scrollTop - clientHeight > bias);
   document.body.classList.toggle('reading', isReading);
 }
 
@@ -58,14 +57,6 @@ function bg() {
     });
   }
 
-  function drawPoint(v2: V2) {
-    ctx.beginPath();
-    ctx.arc(v2.x, v2.y, 1, 0, Math.PI * 2);
-    ctx.fillStyle = '#aaa';
-    ctx.fill();
-    ctx.closePath();
-  }
-
   function getPointGrid(s: number, dim: V2) {
     const rows = Array.from(Array(~~(dim.y / s) + 1)).map((_, i) => i);
     const cols = Array.from(Array(~~(dim.x / s) + 1)).map((_, i) => i);
@@ -77,8 +68,8 @@ function bg() {
 }
 
 class Point {
-  private vel = V2.xy(0);
   private initialPos: V2;
+
   color: string;
 
   constructor(
