@@ -45,7 +45,7 @@ body {
     &.reading {
         --backdrop-display: none;
         --content-color: rgba(41, 41, 41, 1);
-        --header-top-border: rgba(41, 41, 41, 1);
+        --header-top-border: 1px solid rgba(41, 41, 41, 1);
         background: #fff;
 
         .block {
