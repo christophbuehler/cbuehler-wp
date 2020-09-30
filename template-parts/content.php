@@ -34,10 +34,9 @@
 			</div>
 		<?php endif; ?>
 
-
-		<div class="hero">
-			<?php the_post_thumbnail(); ?>
-		</div>
+		<!-- <div class="hero">
+			<?php // the_post_thumbnail(); ?>
+		</div> -->
 
 		<div class="content">
 			<?php
