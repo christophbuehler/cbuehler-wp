@@ -54,7 +54,7 @@ function Sticks(canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) {
     const p = 2;
     ctx.fillStyle = 'white';
     for (let y = 0; y < dim.y; y += s + p) {
-      ctx.fillStyle = `rgba(255,255,255,${(y % 100) / 220})`;
+      ctx.fillStyle = `rgba(255,255,255,${(y % 100) / 280})`;
       ctx.fillRect(80, y, 180 * Math.sin((time + y) * .01) + 20, s);
     }
   }
