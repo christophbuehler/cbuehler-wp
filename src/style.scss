@@ -21,6 +21,7 @@ body {
     --menu-pointer-events: none;
     --menu-max-width: 280px;
     --backdrop-display: block;
+    --backdrop-opacity: 1;
     --backdrop-pointer-events: none;
     --backdrop-background: transparent;
     --backdrop-border: 16px solid #fff;
@@ -50,6 +51,7 @@ body {
 
     &.reading {
         --backdrop-display: none;
+        --backdrop-opacity: 0;
         --content-color: rgba(41, 41, 41, 1);
         --header-top-border: 1px solid rgba(41, 41, 41, 1);
         --content-contrast-background: rgba(0,0,0,0.04);
@@ -169,7 +171,8 @@ body {
     }
     
     .backdrop {
-        display: var(--backdrop-display);
+        // display: var(--backdrop-display);
+        opacity: var(--backdrop-opacity);
         pointer-events: var(--backdrop-pointer-events);
         background-color: var(--backdrop-background);
         border-left: var(--backdrop-border);
