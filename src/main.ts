@@ -50,7 +50,7 @@ function bg() {
     }
     cPos = target.sub(cPos).len(4).add(cPos);
     points.forEach(col => {
-      col.forEach((point, i) => {
+      col.forEach((point) => {
         if (point.color === 'transparent') return;
         point.draw(ctx, s);
       });
@@ -87,13 +87,16 @@ class Point {
 
     const hs = s;
 
-    ctx.moveTo(-s * .5, hs * .5);
-    ctx.lineTo(-s * .5, -hs * .5);
 
-    ctx.lineTo(0, -hs * .5);
+    ctx.moveTo(-s * .5, -s * .5);
+    ctx.lineTo(s * .5, s * .5);
 
-    ctx.lineTo(s * .5, -hs * .5);
-    ctx.lineTo(s * .5, hs * .5);
+
+    // ctx.moveTo(-s * .5, hs * .5);
+    // ctx.lineTo(-s * .5, -hs * .5);
+    // ctx.lineTo(0, -hs * .5);
+    // ctx.lineTo(s * .5, -hs * .5);
+    // ctx.lineTo(s * .5, hs * .5);
 
     ctx.closePath();
     ctx.strokeStyle = this.color;
