@@ -549,6 +549,8 @@ body {
                             line-height: 22px;
     
                             img.avatar {
+                                width: 32px;
+                                height: 32px;
                                 border-radius: 50%;
                                 margin-right: 16px;
                                 border: 1px solid var(--header-top-border);
