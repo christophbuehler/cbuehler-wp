@@ -96,7 +96,7 @@ body {
     }
 
     pre {
-        color: #000;
+        color: var(--content-color);
         background: var(--content-contrast-background);
         border-radius: 0;
         padding: 16px;
