@@ -52,6 +52,7 @@ body {
     &.reading {
         --backdrop-display: none;
         --backdrop-opacity: 0;
+        --backdrop-border: none;
         --content-color: rgba(41, 41, 41, 1);
         --header-top-border: 1px solid rgba(41, 41, 41, 1);
         --content-contrast-background: rgba(0,0,0,0.04);
