@@ -28,6 +28,7 @@ body {
     --menu-opacity: 0;
     --comment-submit-width: auto;
     --content-font-size: 16pt;
+    --sm-font-size: 10pt;
     --content-contrast-background: rgba(255,255,255,0.04);
 
     font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -99,7 +100,7 @@ body {
         background: var(--content-contrast-background);
         border-radius: 0;
         padding: 16px;
-        font-size: .7em;
+        font-size: var(--sm-font-size);
         overflow: auto;
         line-height: 22px;
         border: 1px solid rgba(0,0,0,.1);
@@ -114,7 +115,7 @@ body {
         line-height: 28px;
         height: 28px;
         text-align: left;
-        font-size: 16px;
+        font-size: var(--content-font-size);
         font-weight: 700;
         letter-spacing: 1px;
         margin-top: 32px;
@@ -122,7 +123,7 @@ body {
     }
 
     a.article-link {
-        font-size: 16px;
+        font-size: var(--content-font-size);
         display: block;
         text-decoration: none;
         color: inherit;
@@ -357,7 +358,7 @@ body {
         display: flex;
         vertical-align: middle;
         line-height: 32px;
-        font-size: 16px;
+        font-size: var(--content-font-size);
         font-weight: 500;
         cursor: pointer;
         padding: 4px;
@@ -376,26 +377,26 @@ body {
     }
 
     .subtitle {
-        font-size: 14px;
+        font-size: var(--content-font-size);
         padding: 4px 0;
         margin-bottom: 4px;
         display: inline-block;
         // border-bottom: 1px solid rgba(0, 0, 0, .8);
     }
 
-    article {
+    article:not(.comment-body) {
         min-height: 100vh;
         width: 100%;
         padding: 128px 32px 32px;
         box-sizing: border-box;
         color: var(--content-color);
 
-        &.cybergray {
-
-        }
-
         &.no-stretch {
             min-height: unset;
+        }
+
+        h3 {
+            margin: 42px 0;
         }
 
         h1 {
@@ -451,6 +452,9 @@ body {
             font-size: 16px;
             text-align: center;
             margin-top: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
 
@@ -510,7 +514,7 @@ body {
                 line-height: 42px;
                 height: 42px;
                 font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
-                font-size: 16px;
+                font-size: var(--content-font-size);
                 background: rgb(41, 41, 41);
                 color: #fff;
                 font-weight: 500;
@@ -520,6 +524,53 @@ body {
     
                 &:active {
                     box-shadow: 0 0 0 8px rgba(30, 0, 20, .1), 0 0 0 16px rgba(30, 0, 20, .1);
+                }
+            }
+        }
+
+        ol.comment-list {
+            list-style: none;
+            padding: 0;
+
+            >li {
+                a {
+                    color: #681444;
+                    display: inline-block;
+                    border-bottom: 1px solid #681444;
+                    text-decoration: none;
+                }
+
+                article.comment-body {
+                    margin-bottom: 16px;
+
+                    footer.comment-meta {
+                        .vcard {
+                            display: flex;
+                            align-items: center;
+    
+                            img.avatar {
+                                border-radius: 50%;
+                                margin-right: 16px;
+                            }
+    
+                            .says {
+                                margin-left: 8px;
+                                padding-left: 16px;
+                            }
+
+                            .comment-metadata > a {
+                                text-decoration: none;
+                                border-bottom: none;
+                                color: #666;
+                                font-size: var(--sm-font-size);
+                            }
+                        }
+                    }
+                }
+
+                ol.children {
+                    list-style: none;
+                    border-left: 2px solid #aaa;
                 }
             }
         }
