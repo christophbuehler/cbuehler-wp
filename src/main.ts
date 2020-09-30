@@ -23,9 +23,6 @@ function bg() {
   const canvas = document.querySelector('.bg') as HTMLCanvasElement;
   const ctx = canvas.getContext('2d');
 
-  let mPos: V2;
-  document.body.addEventListener('mousemove', evt => mPos = new V2(evt.pageX, evt.pageY));
-
   setInterval(update, 40);
   let time = 0;
   let points: Point[][];
