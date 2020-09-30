@@ -12,7 +12,7 @@
 }
 
 body {
-    --content-color: rgba(255, 255, 255, .8);
+    --content-color: rgba(255, 255, 255, 1);
     --header-left-display: flex;
     --header-top-transform: translate(0, -100%);
     --menu-transform: translate(120px, 0);
@@ -83,12 +83,14 @@ body {
     }
 
     pre {
-        color: #fff;
-        background: #000;
-        border-radius: 0;
+        color: #000;
+        background: #fcfcff;
+        border-radius: 8px;
         padding: 16px;
         font-size: .7em;
         overflow: auto;
+        line-height: 22px;
+        border: 1px solid rgba(0,0,0,.1);
     }
 
     .pd0 {
