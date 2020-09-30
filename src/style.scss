@@ -13,7 +13,8 @@
 
 body {
     // --content-color: rgba(255, 255, 255, 1);
-    --content-color: #000;
+    // --content-color: rgba(41, 41, 41, 1);
+    --content-color: #fff;
     --header-left-display: flex;
     --header-top-transform: translate(0, -100%);
     --menu-transform: translate(120px, 0);
@@ -27,7 +28,7 @@ body {
     font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
     margin: 0;
     padding: 0;
-    background: #924488;
+    background: #303FA4;
     color: var(--content-color);
 
     @media all and (max-width: 1200px) {
@@ -44,7 +45,7 @@ body {
 
     &.reading {
         --backdrop-display: none;
-        --content-color: #000;
+        --content-color: rgba(41, 41, 41, 1);
         background: #fff;
 
         .block {
@@ -420,7 +421,7 @@ body {
     .wp-block-quote {
         margin: 0;
         padding: 8px 16px;
-        background: #f2f2f2;
+        background: rgba(0,0,0,.04);
         font-style: italic;
     }
 
@@ -434,7 +435,9 @@ body {
         }
 
         figcaption {
-            color: #aaa; 
+            color: #333;
+            font-size: 16px;
+            text-align: center;
         }
     }
 
