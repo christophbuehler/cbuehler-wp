@@ -7,6 +7,7 @@
         --menu-pointer-events: all;
         --backdrop-pointer-events: all;
         --backdrop-background: rgba(255,255,255,.7);
+        --backdrop-border: none;
         --menu-transform: translate(0, 0);
         --menu-opacity: 1;
     }
@@ -22,6 +23,7 @@ body {
     --backdrop-display: block;
     --backdrop-pointer-events: none;
     --backdrop-background: transparent;
+    --backdrop-border: 16px solid #fff;
     --menu-opacity: 0;
     --comment-submit-width: auto;
     --content-font-size: 16pt;
@@ -170,15 +172,15 @@ body {
         display: var(--backdrop-display);
         pointer-events: var(--backdrop-pointer-events);
         background-color: var(--backdrop-background);
-        border-left: 16px solid #fff;
-        border-right: 16px solid #fff;
+        border-left: var(--backdrop-border);
+        border-right: var(--backdrop-border);
         box-sizing: border-box;
         position: fixed;
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
-        transition: background-color .2s ease;
+        transition: background-color .2s ease, border .2s ease;
     }
 
     .scroll-to-article {
