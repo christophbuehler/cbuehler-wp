@@ -12,12 +12,15 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="block">
 		<?php
-		if (is_singular()) :
-			the_title('<h1>', '</h1>');
-		else :
-			the_title('<h1>', '</h1>');
-		endif;
-
+			if (is_singular()) :
+				the_title('<h1>', '</h1>');
+			else :
+				the_title('<h1>', '</h1>');
+			endif;
+		?>
+	</div>
+	<div class="block">
+		<?php
 		if ('post' === get_post_type()) :
 		?>
 
@@ -61,6 +64,14 @@
 				Convert cyber space into neutral
 				<i class="material-icons">arrow_forward</i>
 			</div> -->
+		</div>
+		<div>
+		<?php
+		// If comments are open or we have at least one comment, load up the comment template.
+		if (comments_open() || get_comments_number()) {
+			comments_template();
+		}
+		?>
 		</div>
 	</div>
 </article>
