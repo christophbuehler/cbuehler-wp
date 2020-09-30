@@ -53,8 +53,7 @@ if ( post_password_required() ) {
 				wp_list_comments( array(
 					'style'       => 'ol',
 					'short_ping'  => true,
-					'avatar_size' => 42,
-					'callback' => 'cbuehler_comments'
+					'avatar_size' => 42
 				) );
 			?>
 		</ol><!-- .comment-list -->
