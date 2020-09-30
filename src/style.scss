@@ -24,7 +24,7 @@ body {
     --backdrop-opacity: 1;
     --backdrop-pointer-events: none;
     --backdrop-background: transparent;
-    --backdrop-border: 16px solid #fff;
+    --backdrop-border: 8px solid #681444;
     --menu-opacity: 0;
     --comment-submit-width: auto;
     --content-font-size: 16pt;
@@ -54,7 +54,7 @@ body {
         --backdrop-opacity: 0;
         --backdrop-border: none;
         --content-color: rgba(41, 41, 41, 1);
-        --header-top-border: 1px solid rgba(41, 41, 41, 1);
+        --header-top-border: 1px solid #681444;
         --content-contrast-background: rgba(0,0,0,0.04);
         background: #fff;
 
@@ -177,7 +177,7 @@ body {
         pointer-events: var(--backdrop-pointer-events);
         background-color: var(--backdrop-background);
         border-left: var(--backdrop-border);
-        border-right: var(--backdrop-border);
+        // border-right: var(--backdrop-border);
         box-sizing: border-box;
         position: fixed;
         left: 0;
