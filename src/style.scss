@@ -437,6 +437,15 @@ body {
         font-style: italic;
     }
 
+    figure {
+        display: block;
+        width: 100%;
+
+        iframe {
+            width: 100%;
+        }
+    }
+
     .wp-block-image {
         margin: 0;
         overflow: hidden;
@@ -445,15 +454,6 @@ body {
             max-width: 100%;
             width: auto !important;
             height: auto !important;
-        }
-
-        figure {
-            display: block;
-            width: 100%;
-
-            iframe {
-                width: 100%;
-            }
         }
 
         figcaption {
