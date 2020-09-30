@@ -142,7 +142,7 @@ require get_template_directory() . '/inc/template-tags.php';
 /**
  * Load Custom Comments Layout file.
  */
-require get_template_directory() . '/inc/comment-helper.php';
+require get_template_directory() . '/inc/comments-helper.php';
 
 /**
  * Functions which enhance the theme by hooking into WordPress.
