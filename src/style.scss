@@ -459,8 +459,9 @@ body {
     }
 
     .more-articles {
-        margin-top: 64px;
-        margin-bottom: 16px;
+        h2 {
+            margin-top: 64px;
+        }
         
         .articles {
             display: grid;
