@@ -447,6 +447,15 @@ body {
             height: auto !important;
         }
 
+        figure {
+            display: block;
+            width: 100%;
+
+            iframe {
+                width: 100%;
+            }
+        }
+
         figcaption {
             color: #666;
             font-size: 16px;
