@@ -493,19 +493,19 @@ body {
         .submit {
             width: auto;
             display: inline-block;
-            line-height: 34px;
-            height: 34px;
-            border: 1px solid rgba(255,255,255,.1);
+            line-height: 42px;
+            height: 42px;
+            // border: 1px solid rgba(255,255,255,.1);
             font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
-            text-decoration: uppercase;
             font-size: 16px;
             text-transform: uppercase;
             background: rgb(41, 41, 41);
             color: #fff;
             font-weight: 500;
+            letter-spacing: 1px;
 
             &:active {
-                box-shadow: 0 0 2px #f2f2f2, 0 0 8px #fafafa;
+                box-shadow: 0 0 0 2px #f2f2f2, 0 0 0 8px #fafafa;
             }
         }
     }
