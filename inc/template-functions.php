@@ -25,10 +25,6 @@ function cbuehlerli_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'cbuehlerli_body_classes' );
-function custom_comment_date( $date, $d, $comment ) {
-	return mysql2date( 'F jS, Y', $comment->comment_date );
-}
-add_filter( 'get_comment_date', 'custom_comment_date', 10, 3);
 
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
