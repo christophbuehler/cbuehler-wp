@@ -62,17 +62,17 @@
 	</div>
 	<div class="block">
 		<div class="fx-row fx-end">
-			<!-- <div class="btn">
-			Convert cyber space into neutral
-			<i class="material-icons">arrow_forward</i>
-		</div> -->
+			<div class="btn">
+				Convert cyber space into neutral
+				<i class="material-icons">arrow_forward</i>
+			</div>
 		</div>
 		<div>
 		<?php
 		// If comments are open or we have at least one comment, load up the comment template.
-		if (comments_open() || get_comments_number()) {
-			comments_template();
-		}
+		// if (comments_open() || get_comments_number()) {
+		// 	comments_template();
+		// }
 		?>
 		</div>
 	</div>
