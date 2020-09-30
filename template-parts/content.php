@@ -61,6 +61,8 @@
 		</div>
 	</div>
 	<div class="block more-articles">
+			<h2>Continue reading</h2>
+
 			<?php
 			$args = array(
 				'post_type' => 'post'
@@ -73,10 +75,14 @@
 							$post_query->the_post();
 			?>
 							<a href="<?php the_permalink(); ?>" class="article">
+									<div class="preview-img">
+										<?php the_post_thumbnail();?>
+									</div>
+									<div class="title">
 									<?php
 									the_title();
-									the_post_thumbnail();
 									?>
+									</div>
 									<div class="tagline">
 											<?php
 											echo get_the_date('F Y');
