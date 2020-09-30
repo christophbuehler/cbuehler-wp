@@ -75,8 +75,8 @@
 								$post_query->the_post();
 				?>
 								<a href="<?php the_permalink(); ?>" class="article">
-										<div class="preview-img">
-											<?php the_post_thumbnail();?>
+										<div class="preview-img" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>');">
+											
 										</div>
 										<div class="title">
 										<?php
