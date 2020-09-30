@@ -424,9 +424,19 @@ body {
         font-style: italic;
     }
 
+    .wp-block-image {
+        img {
+            max-width: 100%;
+            width: auto !important;
+            height: auto !important;
+        }
+    }
+
     .comments-area {
         label {
             display: block;
+            line-height: 24px;
+            height: 24px;
         }
 
         textarea, input {
@@ -440,7 +450,12 @@ body {
             }
         }
 
+        textarea {
+            padding: 16px;
+        }
+
         input {
+            padding: 0 16px;
             line-height: 34px;
             height: 34px;
             outline: none;
