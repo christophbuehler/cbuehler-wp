@@ -24,6 +24,8 @@ body {
     --backdrop-background: transparent;
     --menu-opacity: 0;
     --comment-submit-width: auto;
+    --content-font-size: 16pt;
+    --content-contrast-background: rgba(255,255,255,0.04);
 
     font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
     margin: 0;
@@ -48,6 +50,7 @@ body {
         --backdrop-display: none;
         --content-color: rgba(41, 41, 41, 1);
         --header-top-border: 1px solid rgba(41, 41, 41, 1);
+        --content-contrast-background: rgba(0,0,0,0.04);
         background: #fff;
 
         .block {
@@ -88,7 +91,7 @@ body {
 
     pre {
         color: #000;
-        background: #fcfcff;
+        background: var(--content-contrast-background);
         border-radius: 0;
         padding: 16px;
         font-size: .7em;
@@ -400,7 +403,7 @@ body {
 
         .meta {
             color: var(--content-color);
-            margin-bottom: 16px;
+            margin-bottom: 64px;
             opacity: .8;
         }
 
@@ -411,7 +414,7 @@ body {
 
         .content {
             line-height: 32px;
-            font-size: 20px;
+            font-size: var(--content-font-size);
         }
 
         .banner {
@@ -424,7 +427,7 @@ body {
     .wp-block-quote {
         margin: 0;
         padding: 8px 16px;
-        background: rgba(0,0,0,.04);
+        background: var(--content-contrast-background);
         font-style: italic;
     }
 
@@ -438,9 +441,10 @@ body {
         }
 
         figcaption {
-            color: #333;
+            color: #666;
             font-size: 16px;
             text-align: center;
+            margin-top: 0;
         }
     }
 
