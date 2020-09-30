@@ -536,7 +536,6 @@ body {
                 a {
                     color: #681444;
                     display: inline-block;
-                    border-bottom: 1px solid #681444;
                     text-decoration: none;
                 }
 
@@ -547,23 +546,35 @@ body {
                         .vcard {
                             display: flex;
                             align-items: center;
+                            line-height: 22px;
     
                             img.avatar {
                                 border-radius: 50%;
                                 margin-right: 16px;
+                                border: 1px solid var(--header-top-border);
                             }
     
                             .says {
                                 margin-left: 8px;
-                                padding-left: 16px;
                             }
+                        }
 
-                            .comment-metadata > a {
-                                text-decoration: none;
-                                border-bottom: none;
-                                color: #666;
-                                font-size: var(--sm-font-size);
-                            }
+                        .comment-metadata > a {
+                            text-decoration: none;
+                            border-bottom: none;
+                            color: #666;
+                            font-size: var(--sm-font-size);
+                        }
+                    }
+
+                    .reply {
+                        text-align: right;
+
+                        > a {
+                            border: 1px solid rgba(0,0,0,.1);
+                            border-radius: 2px;
+                            padding: 0 4px;
+                            box-sizing: border-box;
                         }
                     }
                 }
