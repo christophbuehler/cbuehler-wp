@@ -62,44 +62,38 @@
 	</div>
 	<div class="block more-articles">
 			<h2>Continue reading</h2>
+			<div class="articles">
+				<?php
+				$args = array(
+					'post_type' => 'post'
+				);
 
-			<?php
-			$args = array(
-				'post_type' => 'post'
-			);
+				$post_query = new WP_Query($args);
 
-			$post_query = new WP_Query($args);
-
-			if ($post_query->have_posts()) {
-					while ($post_query->have_posts()) {
-							$post_query->the_post();
-			?>
-							<a href="<?php the_permalink(); ?>" class="article">
-									<div class="preview-img">
-										<?php the_post_thumbnail();?>
-									</div>
-									<div class="title">
-									<?php
-									the_title();
-									?>
-									</div>
-									<div class="tagline">
-											<?php
-											echo get_the_date('F Y');
-											?>
-									</div>
-							</a>
-			<?php
-					}
-			}
-			?>
-
-		<div class="fx-row fx-end">
-			<div class="btn">
-				Convert cyber space into neutral
-				<i class="material-icons">arrow_forward</i>
-			</div>
-		</div>
+				if ($post_query->have_posts()) {
+						while ($post_query->have_posts()) {
+								$post_query->the_post();
+				?>
+								<a href="<?php the_permalink(); ?>" class="article">
+										<div class="preview-img">
+											<?php the_post_thumbnail();?>
+										</div>
+										<div class="title">
+										<?php
+										the_title();
+										?>
+										</div>
+										<div class="tagline">
+												<?php
+												echo get_the_date('F Y');
+												?>
+										</div>
+								</a>
+				<?php
+						}
+				}
+				?>
+			<div>
 		<div>
 		<?php
 		// If comments are open or we have at least one comment, load up the comment template.
