@@ -458,134 +458,146 @@ body {
         }
     }
 
-    .comments-area {
-        font-size: 16px;
-        line-height: 32px;
-
-        label {
-            display: block;
-            line-height: 24px;
-            height: 24px;
-        }
-
-        textarea, input {
-            width: 100%;
-            box-sizing: border-box;
-            border: 1px solid rgba(0,0,0,.1);
-            background: #fafafa;
-            outline: none;
-
-            &:focus {
-                background: #fff;
-            }
-        }
-
-        textarea {
-            padding: 16px;
-        }
-
-        input {
-            padding: 0 16px;
-            line-height: 34px;
-            height: 34px;
-        }
-
-        .comment-form-cookies-consent {
-            display: flex;
-            align-items: flex-start;
-
-            input {
-                width: 32px;
-                height: 32px;
-                flex: 0 0 32px;
-                margin-right: 16px;
-            }
-
-            label {
-                height: auto;
-            }
-        }
-
-        .form-submit {
-            margin-top: 16px;
-
-            .submit {
-                display: inline-block;
-                line-height: 42px;
-                height: 42px;
-                font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
-                font-size: var(--content-font-size);
-                background: rgb(41, 41, 41);
-                color: #fff;
-                font-weight: 500;
-                box-sizing: border-box;
-                letter-spacing: 1px;
-                width: var(--comment-submit-width);
-    
-                &:active {
-                    box-shadow: 0 0 0 8px rgba(30, 0, 20, .1), 0 0 0 16px rgba(30, 0, 20, .1);
-                }
-            }
-        }
-
-        ol.comment-list {
-            list-style: none;
-            padding: 0;
-
-            >li {
-                a {
-                    color: #681444;
-                    display: inline-block;
-                    text-decoration: none;
-                }
-
-                article.comment-body {
-                    margin-bottom: 16px;
-
-                    footer.comment-meta {
-                        .vcard {
-                            display: flex;
-                            align-items: center;
-                            line-height: 22px;
-    
-                            img.avatar {
-                                width: 32px;
-                                height: 32px;
-                                border-radius: 50%;
-                                margin-right: 16px;
-                                border: 1px solid var(--header-top-border);
-                            }
-    
-                            .says {
-                                margin-left: 8px;
-                            }
-                        }
-
-                        .comment-metadata > a {
-                            text-decoration: none;
-                            border-bottom: none;
-                            color: #666;
-                            font-size: var(--sm-font-size);
-                        }
-                    }
-
-                    .reply {
-                        text-align: right;
-
-                        > a {
-                            border: 1px solid rgba(0,0,0,.1);
-                            border-radius: 2px;
-                            padding: 0 4px;
-                            box-sizing: border-box;
-                        }
-                    }
-                }
-
-                ol.children {
-                    list-style: none;
-                    border-left: 2px solid #aaa;
-                }
-            }
+    .more-articles {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        
+        .article {
+            width: 220px;
+            height: 220px;
+            border: 1px solid rgba(0, 0, 0, .1);
         }
     }
+
+    // .comments-area {
+    //     font-size: 16px;
+    //     line-height: 32px;
+
+    //     label {
+    //         display: block;
+    //         line-height: 24px;
+    //         height: 24px;
+    //     }
+
+    //     textarea, input {
+    //         width: 100%;
+    //         box-sizing: border-box;
+    //         border: 1px solid rgba(0,0,0,.1);
+    //         background: #fafafa;
+    //         outline: none;
+
+    //         &:focus {
+    //             background: #fff;
+    //         }
+    //     }
+
+    //     textarea {
+    //         padding: 16px;
+    //     }
+
+    //     input {
+    //         padding: 0 16px;
+    //         line-height: 34px;
+    //         height: 34px;
+    //     }
+
+    //     .comment-form-cookies-consent {
+    //         display: flex;
+    //         align-items: flex-start;
+
+    //         input {
+    //             width: 32px;
+    //             height: 32px;
+    //             flex: 0 0 32px;
+    //             margin-right: 16px;
+    //         }
+
+    //         label {
+    //             height: auto;
+    //         }
+    //     }
+
+    //     .form-submit {
+    //         margin-top: 16px;
+
+    //         .submit {
+    //             display: inline-block;
+    //             line-height: 42px;
+    //             height: 42px;
+    //             font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
+    //             font-size: var(--content-font-size);
+    //             background: rgb(41, 41, 41);
+    //             color: #fff;
+    //             font-weight: 500;
+    //             box-sizing: border-box;
+    //             letter-spacing: 1px;
+    //             width: var(--comment-submit-width);
+    
+    //             &:active {
+    //                 box-shadow: 0 0 0 8px rgba(30, 0, 20, .1), 0 0 0 16px rgba(30, 0, 20, .1);
+    //             }
+    //         }
+    //     }
+
+    //     ol.comment-list {
+    //         list-style: none;
+    //         padding: 0;
+
+    //         >li {
+    //             a {
+    //                 color: #681444;
+    //                 display: inline-block;
+    //                 text-decoration: none;
+    //             }
+
+    //             article.comment-body {
+    //                 margin-bottom: 16px;
+
+    //                 footer.comment-meta {
+    //                     .vcard {
+    //                         display: flex;
+    //                         align-items: center;
+    //                         line-height: 22px;
+    
+    //                         img.avatar {
+    //                             width: 32px;
+    //                             height: 32px;
+    //                             border-radius: 50%;
+    //                             margin-right: 16px;
+    //                             border: 1px solid var(--header-top-border);
+    //                         }
+    
+    //                         .says {
+    //                             margin-left: 8px;
+    //                         }
+    //                     }
+
+    //                     .comment-metadata > a {
+    //                         text-decoration: none;
+    //                         border-bottom: none;
+    //                         color: #666;
+    //                         font-size: var(--sm-font-size);
+    //                     }
+    //                 }
+
+    //                 .reply {
+    //                     text-align: right;
+
+    //                     > a {
+    //                         border: 1px solid rgba(0,0,0,.1);
+    //                         border-radius: 2px;
+    //                         padding: 0 4px;
+    //                         box-sizing: border-box;
+    //                     }
+    //                 }
+    //             }
+
+    //             ol.children {
+    //                 list-style: none;
+    //                 border-left: 2px solid #aaa;
+    //             }
+    //         }
+    //     }
+    // }
 }

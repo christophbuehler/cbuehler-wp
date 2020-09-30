@@ -60,7 +60,34 @@
 			?>
 		</div>
 	</div>
-	<div class="block">
+	<div class="block more-articles">
+			<?php
+			$args = array(
+				'post_type' => 'post'
+			);
+
+			$post_query = new WP_Query($args);
+
+			if ($post_query->have_posts()) {
+					while ($post_query->have_posts()) {
+							$post_query->the_post();
+			?>
+							<a href="<?php the_permalink(); ?>" class="article">
+									<?php
+									the_title();
+									the_post_thumbnail();
+									?>
+									<div class="tagline">
+											<?php
+											echo get_the_date('F Y');
+											?>
+									</div>
+							</a>
+			<?php
+					}
+			}
+			?>
+
 		<div class="fx-row fx-end">
 			<div class="btn">
 				Convert cyber space into neutral
