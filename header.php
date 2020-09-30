@@ -30,7 +30,7 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
             </div>
         </header>
         <nav>
-            <div class="art-title">Articles</div>
+            <div class="sub-title">Articles</div>
 
             <?php
             $args = array(
@@ -43,7 +43,7 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
                 while ($post_query->have_posts()) {
                     $post_query->the_post();
             ?>
-                    <a href="<?php the_permalink(); ?>" class="article">
+                    <a href="<?php the_permalink(); ?>" class="article-link">
                         <?php the_title(); ?>
                         <div class="tagline">
                             <?php

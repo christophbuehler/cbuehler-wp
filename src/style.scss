@@ -94,6 +94,68 @@ body {
     .pd0 {
         padding: 0;
     }
+
+    .sub-title {
+        display: block;
+        line-height: 28px;
+        height: 28px;
+        text-align: left;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-top: 32px;
+        margin-bottom: 8px;
+    }
+
+    a.article-link {
+        font-size: 16px;
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        margin: 16px 0 32px;
+        padding: 0;
+        position: relative;
+        color: black;
+
+        &:before {
+            content: attr(data-content);
+        }
+
+        &:after {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: attr(data-content);
+            color: transparent;
+            border-bottom: 2px solid black;
+        }
+
+        &:active {
+            box-shadow: 0 0 1px 4px rgba(240,240,255,.8);
+        }
+
+        &:hover {
+            .overlay {
+                height: 100%;
+            }
+        }
+
+        .overlay {
+            height: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            background: black;
+        }
+
+
+        .tagline {
+            line-height: 28px;
+            color: #666;
+        }
+    }
     
     .backdrop {
         display: var(--backdrop-display);
@@ -177,37 +239,6 @@ body {
 
         nav {
             text-align: left;
-
-            .art-title {
-                display: block;
-                line-height: 28px;
-                height: 28px;
-                text-align: left;
-                font-size: 16px;
-                font-weight: 700;
-                letter-spacing: 1px;
-                margin-top: 32px;
-                margin-bottom: 8px;
-            }
-
-            a.article {
-                font-size: 16px;
-                display: block;
-                text-decoration: none;
-                color: inherit;
-                cursor: pointer;
-                margin-bottom: 16px;
-                padding: 16px 0;
-
-                &:active {
-                    box-shadow: 0 0 1px 4px rgba(240,240,255,.8);
-                }
-
-                .tagline {
-                    line-height: 28px;
-                    color: #666;
-                }
-            }
         }
     }
 
@@ -339,6 +370,14 @@ body {
         padding: 128px 32px 32px;
         box-sizing: border-box;
         color: var(--content-color);
+
+        &.cybergray {
+
+        }
+
+        &.no-stretch {
+            min-height: unset;
+        }
 
         h1 {
             font-size: 40px;
