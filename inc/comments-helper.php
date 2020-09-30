@@ -1,6 +1,6 @@
 <?php
 if( ! function_exists( 'cbuehler_comments' ) ):
-function better_commets($comment, $args, $depth) {
+function cbuehler_comments($comment, $args, $depth) {
     ?>
    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
     <div class="comment">
