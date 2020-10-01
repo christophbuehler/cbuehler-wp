@@ -139,12 +139,13 @@ body {
         }
 
         .preview-img {
-            width: 82px;
-            height: 82px;
+            width: 40%;
+            border: 1px solid rgba(0, 0, 0, .1);
+            margin-right: 8px;
         }
 
         .art-title {
-
+            font-size: var(--sm-font-size);
         }
 
         .overlay {
