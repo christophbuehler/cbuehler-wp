@@ -29,7 +29,7 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
             </div>
         </header>
         <nav>
-            <!-- <div class="sub-title">Articles</div> -->
+            <div class="sub-title">Recent Articles</div>
 
             <?php
             $args = array(
