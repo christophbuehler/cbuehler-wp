@@ -127,7 +127,7 @@ body {
         text-decoration: none;
         color: inherit;
         cursor: pointer;
-        margin: 16px 0 32px;
+        margin: 0 0 16px;
         padding: 0;
         position: relative;
         color: black;
@@ -150,6 +150,7 @@ body {
         .art-title {
             font-size: var(--sm-font-size);
             font-weight: 600;
+            flex: 1 1;
 
             .tagline {
                 font-weight: 300;
