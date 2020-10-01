@@ -123,7 +123,7 @@ body {
 
     a.article-link {
         font-size: var(--content-font-size);
-        display: block;
+        display: flex;
         text-decoration: none;
         color: inherit;
         cursor: pointer;
@@ -132,27 +132,16 @@ body {
         position: relative;
         color: black;
 
-        &:before {
-            content: attr(data-content);
-        }
-
-        &:after {
-            position: absolute;
-            left: 0;
-            top: 0;
-            content: attr(data-content);
-            color: transparent;
-            border-bottom: 2px solid black;
-        }
-
-        &:active {
-            box-shadow: 0 0 1px 4px rgba(240,240,255,.8);
-        }
-
         &:hover {
             .overlay {
                 height: 100%;
             }
+        }
+
+        .preview-img {
+            width: 82px;
+            height: 82px;
+            
         }
 
         .overlay {
@@ -404,24 +393,6 @@ body {
             font-weight: 400;
         }
 
-        a {
-            display: inline-block;
-            padding: 4px;
-            text-decoration: none;
-            background: var(--content-contrast-background);
-            color: var(--content-color);
-            outline: none;
-
-            &:hover {
-                box-shadow: 0 0 0 1px rgba(255, 255, 255, .4);
-            }
-
-            &:active {
-                box-shadow: 0 0 0 1px rgba(255, 255, 255, .1), 0 0 0 12px rgba(255, 255, 255, .1);
-                outline: none;
-            }
-        }
-
         .meta {
             color: var(--content-color);
             margin-bottom: 64px;
@@ -436,6 +407,24 @@ body {
         .content {
             line-height: 32px;
             font-size: var(--content-font-size);
+
+            a {
+                display: inline-block;
+                padding: 4px;
+                text-decoration: none;
+                background: var(--content-contrast-background);
+                color: var(--content-color);
+                outline: none;
+    
+                &:hover {
+                    box-shadow: 0 0 0 1px rgba(255, 255, 255, .4);
+                }
+    
+                &:active {
+                    box-shadow: 0 0 0 1px rgba(255, 255, 255, .1), 0 0 0 12px rgba(255, 255, 255, .04);
+                    outline: none;
+                }
+            }
         }
 
         .banner {

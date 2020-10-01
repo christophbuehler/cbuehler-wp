@@ -29,7 +29,7 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
             </div>
         </header>
         <nav>
-            <div class="sub-title">Articles</div>
+            <!-- <div class="sub-title">Articles</div> -->
 
             <?php
             $args = array(
@@ -43,6 +43,7 @@ $image = wp_get_attachment_image_src($custom_logo_id, 'full');
                     $post_query->the_post();
             ?>
                     <a href="<?php the_permalink(); ?>" class="article-link">
+                        <div class="preview-img" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>');"></div>
                         <?php the_title(); ?>
                         <div class="tagline">
                             <?php
