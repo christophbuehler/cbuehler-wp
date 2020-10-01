@@ -142,10 +142,20 @@ body {
             width: 40%;
             border: 1px solid rgba(0, 0, 0, .1);
             margin-right: 8px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         .art-title {
             font-size: var(--sm-font-size);
+            font-weight: 600;
+
+            .tagline {
+                font-weight: 300;
+                line-height: 28px;
+                color: #666;
+            }
         }
 
         .overlay {
@@ -155,12 +165,6 @@ body {
             bottom: 0;
             width: 0;
             background: black;
-        }
-
-
-        .tagline {
-            line-height: 28px;
-            color: #666;
         }
     }
     
